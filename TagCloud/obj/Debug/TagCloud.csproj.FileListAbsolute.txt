@@ -11,3 +11,16 @@ C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\03-design-hw\TagClo
 C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\03-design-hw\TagCloud\TagCloud\obj\Debug\TagCloud.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\03-design-hw\TagCloud\TagCloud\obj\Debug\TagCloud.exe
 C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\03-design-hw\TagCloud\TagCloud\obj\Debug\TagCloud.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\bin\Debug\TagCloud.exe.config
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\obj\Debug\TagCloud.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\obj\Debug\TagCloud.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\bin\Debug\TagCloud.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\bin\Debug\TagCloud.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\bin\Debug\CommandLine.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\bin\Debug\Extendables.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\bin\Debug\Ninject.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\bin\Debug\nunit.framework.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\bin\Debug\CommandLine.xml
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\bin\Debug\Ninject.xml
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\bin\Debug\nunit.framework.xml
+C:\Users\user\Documents\Visual Studio 2015\Projects\TagCloud\04-fp-hw\TagCloud\obj\Debug\TagCloud.csprojResolveAssemblyReference.cache

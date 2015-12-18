@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using CommandLine;
-using CommandLine.Text;
 namespace TagCloud
 {
-	class ConsoleOptions: IOptions
+	class ConsoleOptions
 	{
 		[Option('i', "input", DefaultValue = "../../input.txt", HelpText = "file to read")]
 		public string InputFilePath { get; set; }
@@ -30,49 +29,6 @@ namespace TagCloud
 		[Option('s', "maxsize", DefaultValue = 90, HelpText = "Maximum font size")]
 		public int MaxFontSize { get; set; }
 
-		public string GetUsage()
-		{
-			return HelpText.AutoBuild(this);
-		}
-
-		public string GetInputFile()
-		{
-			return InputFilePath;
-		}
-
-		public string GetOutputFile()
-		{
-			return OutputFilePath;
-		}
-
-		public int GetBitmapWidth()
-		{
-			return Width;
-		}
-
-		public int GetBitmapHeight()
-		{
-			return Height;
-		}
-
-		public IList<string> GetColor()
-		{
-			return Color;
-		}
-
-		public int GetMaxFontSize()
-		{
-			return MaxFontSize;
-		}
-
-		public int GetMinFontSize()
-		{
-			return MinFontSize;
-		}
-
-		public string GetOutputFormat()
-		{
-			return OutputFormat;
-		}
+		
 	}
 }

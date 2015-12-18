@@ -75,19 +75,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAlgorithm.cs" />
-    <Compile Include="IImageWriter.cs" />
-    <Compile Include="ImageWriter.cs" />
-    <Compile Include="IOptions.cs" />
-    <Compile Include="ITagCloudBuilder.cs" />
     <Compile Include="ConsoleOptions.cs" />
-    <Compile Include="IWordsFilter.cs" />
-    <Compile Include="IWordsReader.cs" />
-    <Compile Include="AlphabeticTagCloudAlgorithm.cs" />
-    <Compile Include="PrepositionsFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleWordsReader.cs" />
     <Compile Include="TagCloudBuilder.cs" />
   </ItemGroup>
   <ItemGroup>

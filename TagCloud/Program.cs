@@ -1,33 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Ninject;
+
 namespace TagCloud
 {
+
     class Program
     {
-        static void Main(string[] args)
-        {
-	        var kernel = new StandardKernel();
-			kernel.Bind<IOptions>().To<ConsoleOptions>();
-			var options = kernel.Get<IOptions>();
+	    private const string BadWordsFilePath = "../../prepositions.txt";
+
+	    static void Main(string[] args)
+	    {
+		    var options = new ConsoleOptions();
 			if (!CommandLine.Parser.Default.ParseArguments(args, options))
 				return;
-			
-	        kernel.Bind<IAlgorithm>().To<AlphabeticTagCloudAlgorithm>()
-				.WithConstructorArgument("options", options);
-			kernel.Bind<IImageWriter>().To<ImageWriter>()
-		        .WithConstructorArgument("path",options.GetOutputFile())
-				.WithConstructorArgument("format", options.GetOutputFormat());
-	        kernel.Bind<IWordsReader>().To<SimpleWordsReader>()
-				.WithConstructorArgument("path",options.GetInputFile());
-	        kernel.Bind<IWordsFilter>().To<PrepositionsFilter>();
-	        kernel.Bind<ITagCloudBuilder>().To<TagCloudBuilder>();	
-			kernel.Get<ITagCloudBuilder>().Build();
-
-
+		    var badwords = File.ReadAllText(BadWordsFilePath).Split(new char[] {'\n', '\r'}, StringSplitOptions.RemoveEmptyEntries);
+			var words = ReadWords(options.InputFilePath).Where(w => !badwords.Contains(w));
+			var image = new TagCloudBuilder(options).BuildAlphabeticCloud(words);
+		    WriteImage(image, options.OutputFilePath, options.OutputFormat);
         }
+		private static string[] ReadWords(string path) => File.ReadAllText(path).ToLower().Split(' ');
+		public static void WriteImage(Bitmap bitmap, string path, string format)
+		{
+			var imageFormatFromString = new Dictionary<string, ImageFormat>
+			{
+				[".png"] = ImageFormat.Png,
+				[".bmp"] = ImageFormat.Bmp,
+				[".jpg"] = ImageFormat.Jpeg,
+				[".gif"] = ImageFormat.Gif
+			};
+			bitmap.Save(path + format, imageFormatFromString[format]);
+		}
     }										
 }
